@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/@mojs/core"></script>
+    <script>
+        /*var c1 = new mojs.Shape({
+            shape:'circle',
+            radius:{0:'rand(10,100)'},
+            scale:0.5,
+            fill:'black',
+            left:0,
+            top:0,
+            stroke:'red',
+            strokeWidth:'rand(1,10)',
+            x:{'-100':100},
+            y:{'-100':100},
+            isShowStart:true,
+            duration:500,
+            delay:0
+        });*/
+        var first = new mojs.Shape({
+            shape:'circle',
+            radius:{0:'rand(30,70)'},
+            fill:'none',
+            left:0,
+            top:0,
+            stroke:'cyan',
+            strokeWidth:{20:0}
+        });
+        var seconds = [];var colors=['deeppink','margenta','blue','tomato']
+        for(var i=0;i<4;i++){
+            var second = new mojs.Shape({
+                parent:first.el,
+                shape:'circle',
+                radius:{0:'rand(30,50)'},
+                fill:'none',
+                left:'rand(0,50%)',
+                top:'rand(0,50%)',
+                x:'rand(-50,50)',y:'rand(-50,50)',
+                stroke:colors[i],
+                radius:'rand(10,30)',
+                strokeWidth:{5:0},
+                duration:200,
+                delay:250,
+            });
+            seconds.push(second);
+        }
+        
+        
+        document.addEventListener('click',function(e){
+            first.tune({x:e.pageX,y:e.pageY}).replay();
+            for(var i=0;i<4;i++){
+                seconds[i].generate().replay();
+            }
+
+        })
+    </script>
+    
+</body>
+</html>

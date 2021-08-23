@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+</head>
+<style>
+    body{
+        margin:0;
+    }
+    .scene{
+        height:100vh;
+        overflow: hidden;
+        background-attachment: fixed;
+        background-image: cover;
+    }
+    .scene.one{
+        background-image: url(img/heic0910e.jpg);
+    }
+    .scene.two{
+        background-image: url(img/heic1501a.jpg);
+    }
+    .scene.three{
+        background-image: url(img/heic1608a.jpg);
+    }
+    .scene header{
+        max-width: 80%;
+        position: relative;
+        margin:auto auto;
+        top:50%;
+        font-size: 1rem;
+        color:rgba(255,255,255,0.5);
+        font-weight: 100;
+        text-align: center;
+        font-family: 'Lobster', cursive;
+        
+    }
+    .scene header h1{
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    .scene header h1:after{
+        content:"";
+        width: 10rem;
+        border-bottom: 1px solid rgba(255,255,255,0.6);
+        display:block;
+        margin: 0 auto;
+        margin-top: 1.2rem;;
+    }
+</style>
+<body>
+    <section class ="scene one">
+        <header>
+            <h1>KIHOONS WEB PARALLAX SITE</h1>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis non nesciunt quam esse? Doloremque molestias ipsam nostrum omnis in mollitia ad molestiae accusamus repellat ipsum ut rerum, optio veritatis voluptas!
+        </header>
+    </section>
+    <section class ="scene two">
+        <header>
+            <h1>KIHOONS WEB PARALLAX SITE</h1>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis non nesciunt quam esse? Doloremque molestias ipsam nostrum omnis in mollitia ad molestiae accusamus repellat ipsum ut rerum, optio veritatis voluptas!
+        </header>
+    </section>
+    <section class ="scene three">
+        <header>
+            <h1>KIHOONS WEB PARALLAX SITE</h1>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis non nesciunt quam esse? Doloremque molestias ipsam nostrum omnis in mollitia ad molestiae accusamus repellat ipsum ut rerum, optio veritatis voluptas!
+        </header>
+    </section>
+</body>
+</html>

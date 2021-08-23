@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        
+    }
+    
+    *{
+        box-sizing: border-box;
+    }
+    .container{
+        border:5px solid black;
+    }
+    .container>*{
+        border:5px solid red;
+    }
+    .container>.content>*{
+        border:5px solid green;
+      }
+      .container .content{
+        padding-left:200px;
+        padding-right:150px;
+        overflow: hidden;
+      }
+      .container .content>*{
+        float:left;
+        padding-bottom:2500px;
+        margin-bottom:-2500px;
+      }
+      .container .content main{
+        width:100%;
+      }
+      .container .content nav{
+        width:200px;
+        margin-left: -100%;
+        left:-200px;
+        position: relative;
+      }
+      .container .content aside{
+        width:150px;
+        margin-right:-150px; 
+      }
+      .container footer{
+        clear: both;
+      }
+    .container footer{
+        clear:both;
+    }
+    @media (max-width:599px){
+        .container>.content>*{
+            border:5px solid green;
+            float:none;
+            padding-bottom: 0%;
+            margin-bottom: 0%;
+        }
+        .container .content{
+            padding-left:0;
+            padding-right: 0;
+            overflow: visible;
+        }
+        .container .content main{
+            width: 100%;
+        }
+        .container .content nav{
+            width:auto;
+            margin-left:0;
+            left:0;
+            position: relative;
+        }
+        .container .content aside{
+            width:auto;
+            margin-right:0;
+        }
+    }
+</style>
+<body>
+    <div class="container">
+        <header>
+            <h1>HEADER</h1>
+        </header>
+        <section class="content">
+            <main>
+                MAIN(CENTER)
+            </main>
+            <nav>
+                <ul>
+                    <li>item1 </li>
+                    <li>item2 </li>
+                    <li>item3 </li>
+                    <li>item1 </li>
+                    <li>item2 </li>
+                    <li>item3 </li><li>item1 </li>
+                    <li>item2 </li>
+                    <li>item3 </li><li>item1 </li>
+                    <li>item2 </li>
+                    <li>item3 </li><li>item1 </li>
+                    <li>item2 </li>
+                    
+                </ul>
+            </nav>
+            <aside>
+                ASIDE(RIGHT)
+            </aside>
+            
+        </section>
+        <footer>
+            FOOTER
+        </footer>
+    </div>
+</body>
+</html>
